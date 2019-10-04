@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QnA Changing Triangle to Circle with CSS Transition</title>
+		<style>
+body {
+	background: #f0f0ff;
+	color: #444499;
+}
+.triangle{
+    width: 0; height: 0; 
+    border-left: 70.5px solid transparent;
+    border-right: 70.5px solid transparent;
+    border-top: 100px solid steelblue;
+    border-bottom-color: transparent;
+    border-radius:0;
+    transition: border-radius 500ms 600ms, 
+                border-width 500ms 600ms, 
+                border-color 1400ms;
+}
+.circle{
+    border: 50px solid steelblue;
+    border-radius:50px;
+    transition: all 500ms, border-color 1400ms 250ms;
+}		    
+		</style>
+	</head>
+	<body>
+	  <p>Changing Triangle to Circle with Transition</p>
+	  <button onclick="shape.classList.toggle('circle');">Change Shape</button>
+	  <p></p>
+		<div class="triangle" id="shape"></div>
+	</body>
+</html>
