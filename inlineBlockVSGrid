@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>demo inline-block VS grid</title>
+        <!-- Coded by Gordon on 16/11/2019 -->
+        Add the following in the head tag for responsive page 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+body {
+  background-color:#f0f0ff;
+  color:#444499;
+}
+
+.section{
+  width: 100%;
+  height: 400px;
+  box-shadow: 2px 2px 5px lightgrey;
+}
+
+.one div /*:not(:nth-of-type(4))*/ {
+  width: 32%;
+  display: inline-block;
+  height: 50%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px
+}
+
+.two{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.two div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+        </style>
+        <script>
+onload = () => [...document.getElementsByTagName("div")].map( div => div.style.backgroundColor = `#${"89ABC"[Math.floor(Math.random()*5)]}${"89ABC"[Math.floor(Math.random()*5)]}${"89ABC"[Math.floor(Math.random()*5)]}` );
+        </script>
+    </head>
+    <body>
+        <!-- For Q&A : https://www.sololearn.com/Discuss/2070495/?ref=app -->
+        <h3>demo inline-block VS grid</h3>
+        
+        <h4>Old way : inline-block</h4>
+        <section class="section one">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </section>
+        
+        <h4>New way : grid</h4>
+        <section class="section two">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </section>
+    </body>
+</html>
