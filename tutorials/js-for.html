@@ -13,12 +13,15 @@
     Output : 
 </div>
 
+<div class="ctnr">
 <div class="w3-card">
   <p>for</p>
   <pre class="w3-code">
 for(let i = 0; i < 3; i++)
-  output.innerText += i;
+  output.innerText += (i + "\n");
+  
 </pre>
+  <p> - loops over index</p>
 </div>
 
 <div class="w3-card">
@@ -29,17 +32,23 @@ var obj1 = {
   "key2": "value2"
 };
 for(let k in obj1)
-  output.innerText += k;
+  output.innerText += (k + '\n');
+  
 </pre>
+  <p> - loops over keys of objects;</p>
+  <p> - in case of arrays, their numeric index.</p>
 </div>
 
 <div class="w3-card">
   <p>for of</p>
   <pre class="w3-code">
-var arr1= ["value1", "value2"];
-for(let v of arr1)
-  output.innerText += v;
+var arr1= ["element1", "element2"];
+for(let el of arr1)
+  output.innerText += (el + '\n');
+  
 </pre>
+  <p> - loops over values of objects;</p>
+  <p> - in case of arrays, their elements.</p>
 </div>
 
 <div class="w3-card">
@@ -48,13 +57,15 @@ for(let v of arr1)
 var arr2 = ["value3", "value4"];
 
 function myFunc(element,index){
-  output.innerText += ` ${index} : ${element}`;
+  output.innerText += `${index} -> ${element}\n`;
 }
 
 arr2.forEach(myFunc);
   </pre>
+  <p> - forEach is an Array prototypical method, accepting a function as argument.</p>
+  <p> - The function can have up to three parameters, which are the element, the index and the array itself respectively.</p>
 </div>
-
+</div>
 <style>
 body{
   color: #444499;
