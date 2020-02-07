@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tutorial with Run</title>
+  <meta 
+    name="viewport" 
+    content="width = device-width, initial-scale = 1"
+  >
+</head>
+<body>
+
+<div id="output">
+    Output : 
+</div>
+
+<div class="w3-card">
+  <p>for</p>
+  <pre class="w3-code">
+for(let i = 0; i < 3; i++)
+  output.innerText += i;
+</pre>
+</div>
+
+<div class="w3-card">
+  <p>for in</p>
+  <pre class="w3-code">
+var obj1 = {
+  "key1": "value1", 
+  "key2": "value2"
+};
+for(let k in obj1)
+  output.innerText += k;
+</pre>
+</div>
+
+<div class="w3-card">
+  <p>for of</p>
+  <pre class="w3-code">
+var arr1= ["value1", "value2"];
+for(let v of arr1)
+  output.innerText += v;
+</pre>
+</div>
+
+<div class="w3-card">
+  <p>forEach</p>
+  <pre class="w3-code">
+var arr2 = ["value3", "value4"];
+
+function myFunc(element,index){
+  output.innerText += ` ${index} : ${element}`;
+}
+
+arr2.forEach(myFunc);
+  </pre>
+</div>
+
+<style>
+body{
+  color: #444499;
+}
+.w3-card{
+  background-color: #f0f0ff;
+  padding: 0.3em 0.5em;
+  margin-top: 5px;
+}
+.w3-code{
+  background-color: white;
+  padding: 0.3em 0.3em 1.4em 0.3em;
+  overflow-x: scroll;
+}
+#output{
+  border: 1px solid lightgreen;
+  padding: 0.3em;
+}
+</style>
+<!--<script src="https://gorgorgordon.github.io/MySoloLearnCodes/helpRyanE.js" ></script>-->
+<script src="run.js"></script>
+</body>
+</html>
