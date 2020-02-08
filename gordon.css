@@ -4,6 +4,13 @@
     --gc-dk: #c0c0ff;
 }
 
+.gLogo{
+    width: 70vmin;
+    height: 70vmin;
+    max-width: 250px;
+    max-height: 250px;
+}
+
 body{
     background-color: var(--gc-bg);
     color: var(--gc-ft);
@@ -12,12 +19,15 @@ body{
     font-family: 'Karla', sans-serif;
 }
 
-.content {
+main {
     padding: 0 1em 1em 1em;
 }
 
 h3, h4{
-    font-family: 'Solway', serif;;
+    font-family: 'Solway', serif;
+}
+h3{
+    padding-left: 1em;
 }
 
 .page {
@@ -34,8 +44,6 @@ h3, h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: top 550ms;
 }
 
@@ -61,7 +69,7 @@ nav li:hover {
 }
 
 .menuButton {
-
+    display: none;
 }
 
 .overlay {
@@ -72,4 +80,34 @@ nav li:hover {
 
 .hidden {
     display: none;
+}
+
+@media only screen 
+  and (max-width: 568px) {
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav li:last-child {
+        margin-right: 0;
+    }
+    
+    nav li {
+        display: inline;
+        padding: 0.3em 0.7em;
+        border-radius: 2em;
+    }
+    
+    nav li:hover {
+        background-color: var(--gc-dk);
+    }
+    
+    .menuButton {
+        display: block;
+    }
 }
