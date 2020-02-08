@@ -1,33 +1,15 @@
-:root{
+:root {
     --gc-bg: #f0f0ff;
     --gc-ft: #444499;
     --gc-dk: #c0c0ff;
 }
 
-.gLogo{
-    width: 70vmin;
-    height: 70vmin;
-    max-width: 250px;
-    max-height: 250px;
-}
-
-body{
+body {
     background-color: var(--gc-bg);
     color: var(--gc-ft);
     margin: 0;
     overflow:hidden;
     font-family: 'Karla', sans-serif;
-}
-
-main {
-    padding: 0 1em 1em 1em;
-}
-
-h3, h4{
-    font-family: 'Solway', serif;
-}
-h3{
-    padding-left: 1em;
 }
 
 .page {
@@ -39,12 +21,40 @@ h3{
     overflow-y: scroll;
 }
 
-.loading{
+.loading {
     background-color: var(--gc-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: top 550ms;
+}
+
+.gLogo {
+    width: 70vmin;
+    height: 70vmin;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+h3 {
+    font-family: 'Solway', serif;
+    padding-left: 1em;
+}
+
+main {
+    padding: 0 1em 1em 1em;
+}
+
+h4 {
+    font-family: 'Solway', serif;
+}
+
+.img1 {
+    width: 100%;
+    max-width: 721px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav {
